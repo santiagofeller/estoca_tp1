@@ -23,7 +23,7 @@ T = 2*10^6;
 tActual = 0;
 tAnterior = 0;
 j = 1;
-cantParticulas  = zeros([1,round(max(detecciones)/T)+1]);
+cantParticulas  = zeros([1,round(max(detecciones)/T)]);
 
 for i = 1:(length(detecciones))
     tActual = detecciones(i);
@@ -36,7 +36,7 @@ for i = 1:(length(detecciones))
     end
 end
 sum(cantParticulas)
-
+%debería dar un vector mas largo
 figure;
 mediaCantParticulas = mean(cantParticulas)
 varianzaCantParticulas = var(cantParticulas)
